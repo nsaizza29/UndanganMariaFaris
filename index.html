@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, inscale=1.0">
+    <title>Web Undangan Online</title>
+
+    <link rel="icon" type="image/x-icon" href="img/logo-icon/logo-MF.png">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Passions+Conflict&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet"> 
+
+    <!-- Bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- animation css -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="bg-red-50 overflow-x-hidden" style="font-family: 'Open Sans', sans-serif;">
+
+    <div id="cover" style="background:url(img/bg/wedding.jpg) center center no-repeat; background-size: cover;" class="kosong z-30 fixed top-0 bottom-0 left-0 right-0 w-full h-screen py-28 px-2">
+        <div class="hero mt-[-30px]">
+            <img src="img/element/flower.png" alt="" class="m-auto w-[100px] sm:w-[150px]">
+            <h4 class="text-white text-center font-semibold text-[16px] sm:text-[25px]">Hello You're Invited</h4>
+            <h1 class="text-white align-center text-center font-regular text-[60px] sm:text-[80px] md:text-[100px]" style="font-family: 'Passions Conflict', cursive;">Maria & Faris</span></h1>
+            <hr class="m-auto border-[2px] border-[#fff] w-[16%]">
+            <p class="text-center text-white font-semibold pt-10">11 Febuari 2025</p>
+            <button class="btn-open block m-auto py-2 w-[250px] mt-4 text-center text-white bg-red-400 rounded-lg cursor-pointer" id="open"> Open Invitation </button>
+        </div>
+    </div>
+    
+    <!-- NAVABAR -->
+    
+    <nav class="nav fixed bottom-0 w-full px-[6px] h-[70px] bg-white flex items-center justify-center z-20">
+        <ul class="flex">
+            <li class="rumah m-auto">
+                <a href="#home" class="grid">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="#475569" class="bi bi-house-heart-fill m-auto" viewBox="0 0 16 16">
+                        <path d="M7.293 1.5a1 1 0 0 1 1.414 0L11 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l2.354 2.353a.5.5 0 0 1-.708.707L8 2.207 1.354 8.853a.5.5 0 1 1-.708-.707L7.293 1.5Z"/>
+                        <path d="m14 9.293-6-6-6 6V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9.293Zm-6-.811c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.691 0-5.018Z"/>
+                    </svg>
+                    <span class="nav-title font-bold text-slate-600 text-center">Home</span>
+                </a>
+            </li>
+            <li class="pasangan m-auto">
+                <a href="#couple" class="grid">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#475569" class="bi bi-heart-fill m-auto" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                    </svg>
+                    <span class="nav-title font-bold text-slate-600 text-center">Couple</span>
+                </a>
+            </li>
+            <li class="acara m-auto">
+                <a href="#event" class="grid">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#475569" class="bi bi-calendar2-check-fill m-auto" viewBox="0 0 16 16">
+                        <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zm9.954 3H2.545c-.3 0-.545.224-.545.5v1c0 .276.244.5.545.5h10.91c.3 0 .545-.224.545-.5v-1c0-.276-.244-.5-.546-.5zm-2.6 5.854a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                    </svg>
+                    <span class="nav-title font-bold text-slate-600 text-center">Event</span>
+                </a>
+            </li>
+            <li class="galeri m-auto">
+                <a href="#gallery" class="grid">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#475569" class="bi bi-image-fill m-auto" viewBox="0 0 16 16">
+                        <path d="M.002 3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-12a2 2 0 0 1-2-2V3zm1 9v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12zm5-6.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0z"/>
+                      </svg>
+                    <span class="nav-title font-bold text-slate-600 text-center">Gallery</span>
+                </a>
+            </li>
+            <li class="tamu m-auto">
+                <a href="#guestbook" class="grid">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#475569" class="bi bi-chat-left-dots-fill m-auto" viewBox="0 0 16 16">
+                        <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793V2zm5 4a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                    </svg>
+                    <span class="nav-title font-bold text-slate-600  text-center">Guestbook</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    
+    <!-- HOME -->
+
+    <section id="home" style="background:url(img/bg/wedding.jpg) center center no-repeat; background-size: cover;" class="w-full h-[100%] pt-44 sm:pt-28">
+        <div class="hero">
+            <img src="img/element/flower.png" alt="" class="m-auto w-[100px] sm:w-[150px]">
+            <h4 class="text-white text-center font-semibold text-[16px] sm:text-[25px]">The Wedding Of</h4>
+            <h1 class="text-white align-center text-center font-regular text-[60px] sm:text-[80px] md:text-[100px]" style="font-family: 'Passions Conflict', cursive;">Maria & Faris</span></h1>
+            <hr class="m-auto border-[2px] border-[#fff] w-[16%]">
+            <p class="text-center text-white font-semibold pt-10">11 Febuari 2025</p>
+        </div>
+        <svg class="waves1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+            <defs><path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" /></defs>
+            <g class="parallax">
+                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(254,242,242,0.7" />
+                <use xlink:href="#gentle-wave" x="48" y="3" class="fill-red-100 opacity-[90%]" />
+                <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(254,242,242,0.3)" />
+                <use xlink:href="#gentle-wave" x="48" y="7" class="fill-red-50" />
+            </g>
+        </svg>
+    </section>
+<section id="count-down" class="m-auto mt-[50px]">
+    <div class="count-down">
+        <img src="img/element/flower2.png" alt="" class="sm:w-[300px] w-[80%] pt-[50px] flower4 m-auto">
+        <h1 class="title4 text-[50px] text-center mt-[-5px]" style="font-family: 'Passions Conflict', cursive;">Countdown</h1>
+
+        <div class="circles grid grid-cols-2 sm:grid-cols-4 m-auto mt-[30px]">
+            <div class="circle1 m-auto mb-10 bg-[#faebd7] w-[108px] h-[108px] rounded-full border-[1px] border-orange-200">
+                <h1 id="days" class="text-center text-[30px] mt-7">0</h1>
+                <p class="bg-stone-400 text-center rounded-[5px] text-white">Days</p>
+            </div>
+            <div class="circle2 m-auto mb-10 bg-[#faebd7] w-[108px] h-[108px] rounded-full border-[1px] border-orange-200">
+                <h1 id="hours" class="text-center text-[30px] mt-7">0</h1>
+                <p class="bg-stone-400 text-center rounded-[5px] text-white">Hours</p>
+            </div>
+            <div class="circle3 m-auto mb-10 bg-[#faebd7] w-[108px] h-[108px] rounded-full border-[1px] border-orange-200">
+                <h1 id="minutes" class="text-center text-[30px] mt-7">0</h1>
+                <p class="bg-stone-400 text-center rounded-[5px] text-white">Minutes</p>
+            </div>
+            <div class="circle4 m-auto mb-10 bg-[#faebd7] w-[108px] h-[108px] rounded-full border-[1px] border-orange-200">
+                <h1 id="seconds" class="text-center text-[30px] mt-7">0</h1>
+                <p class="bg-stone-400 text-center rounded-[5px] text-white">Seconds</p>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- COUPLE -->
+    <section id="couple" class="couple z-10">
+        <div id="couple" class="h-[2100px] sm:h-[1050px]">
+            <img src="img/element/flower2.png" alt="" class="sm:w-[300px] w-[80%] pt-[50px] flower m-auto">
+
+            <h1 class="title text-[50px] text-center mt-[-5px]" style="font-family: 'Passions Conflict', cursive;">Bridge & Groom</h1>
+
+            <br>
+
+            <div class="opening w-[80%] m-auto">
+                <p class="salam italic text-gray-800 text-center text-[16px]">Assalamu’alaikum Warahmatullahi Wabarakatuh</p>
+
+                <br>
+
+                <p class="mt-[10px] text-gray-800 text-center text-[15px]">Maha suci Allah SWT yang telah menciptakan makhluk-Nya berpasang-pasangan.</p>
+                <p class="mt-[10px] text-gray-800 text-center text-[15px]">Ya Allah, perkenankanlah kami merangkai kasih sayang yang Kau ciptakan di antara putra-putri kami:</p>
+            </div>
+            
+            <!-- PROFILES 1 -->
+            <div class="profiles flex mt-[70px] invisible sm:visible">
+                <div class="profile1 m-auto mr-10">
+                    <img src="img/profile/female.jpg" alt="" class="w-[170px] rounded-full border-[4px] border-red-200">
+                    <h2 class="mt-[20px] mb-[20px] text-gray-600 text-[70px] text-center" style="font-family: 'Passions Conflict', cursive;">Maria Nur AlFatihah</h2>
+                    <!-- <p  class="text-center font-bold text-lg text-stone-800">Mynonym Putri</p> -->
+                    <p class="text-center text-sm text-gray-800">Putri Ke-2 Dari Pasangan<br><b>Bapak Sunarto & Ibu Winarti</b></p>
+                    <br>
+                    <p class="text-center text-sm text-gray-800">Dk. Krajan Jatisawit Rt.01/ Rw.02 Bumiayu
+                        <br>
+                        (Sebrang Pasar Jatisawit Belakang Obormas)</p>
+                </div>
+                <div class="profile2 m-auto hidden sm:block">
+                    <img src="img/profile/male.jpg" alt="" class="w-[170px] rounded-full border-[4px] border-red-200">
+                    <h2 class="mt-[20px] mb-[20px] text-gray-600 text-[70px] text-center" style="font-family: 'Passions Conflict', cursive;">M. Faris AlFaridzi</h2>
+                    <!-- <p  class="text-center font-bold text-lg text-stone-800">Anonym Putra</p> -->
+                    <p class="text-center text-sm text-gray-800">Putra ke-2 Dari Pasangan<br><b>Bapak M. Taukhid & Ibu Rokhani</b></p>
+                    <br>
+                    <p class="text-center text-sm text-gray-800">Dk. Karangturi Rt.06/ Rw.01 Bumiayu</p>
+                </div>
+            </div>
+
+            <div class="dan m-auto text-center mt-[-375px] font-bold text-[80px] text-stone-800 invisible sm:visible">&</div>
+
+            <!-- PROFILES 2 -->
+            <div class="profiles2 grid mt-[-200px] visible sm:invisible">
+                <div class="profile-1 m-auto">
+                    <img src="img/profile/female.jpg" alt="" class="w-[80%] m-auto rounded-full border-[4px] border-red-200">
+                    <h2 class="mt-[20px] mb-[20px] text-gray-600 text-[70px] text-center" style="font-family: 'Passions Conflict', cursive;">Maria Nur AlFatihah</h2>
+                    <!-- <p  class="text-center font-bold text-lg text-stone-800">Mynonym Putri</p> -->
+                    <p class="text-center text-sm text-gray-800">Putri Ke-2 Dari Pasangan<br><b>Bapak Sunarto & Ibu Winarti</b></p>
+                    <br>
+                    <p class="text-center text-sm text-gray-800">Dk. Krajan Jatisawit Rt.01/ Rw.02 Bumiayu
+                        <br>
+                        (Sebrang Pasar Jatisawit Belakang Obormas)</p>
+                </div>
+
+                <div class="dan2 m-auto text-center mt-[50px] font-bold text-[80px] text-stone-800 visible sm:invisible">&</div>
+
+                <div class="profile-2 m-auto mt-[50px]">
+                    <img src="img/profile/male.jpg" alt="" class="w-[80%] m-auto rounded-full border-[4px] border-red-200">
+                    <h2 class="mt-[20px] mb-[20px] text-gray-600 text-[70px] text-center" style="font-family: 'Passions Conflict', cursive;">M. Faris AlFaridzi</h2>
+                    <!-- <p  class="text-center font-bold text-lg text-stone-800">Anonym Putra</p> -->
+                    <p class="text-center text-sm text-gray-800">Putra ke-2 Dari Pasangan<br><b>Bapak M. Taukhid & Ibu Rokhani</b></p>
+                    <br>
+                    <p class="text-center text-sm text-gray-800">Dk. Karangturi Rt.06/ Rw.01 Bumiayu</p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- EVENT -->
+    
+    <section id="event" style="background:url(img/bg/wedding1.jpg) center center no-repeat; background-size: cover; filter: contrast(1);" class="w-[100%] h-screen pb-10">
+
+        <div class="kosong2"></div>
+
+        <img src="img/element/flower2.png" alt="" class="sm:w-[300px] w-[80%] pt-[50px] flower2 m-auto">
+        <h1 class="title2 text-[50px] text-center mt-[-5px]" style="font-family: 'Passions Conflict', cursive;">Bridge & Groom</h1>
+
+        <div class="acara gap-7 justify-center align-center items-center">
+            <div class="card1 bg-red-50 h-[300px] rounded-lg shadow-lg">
+                <h2 class="text-[50px] text-center mt-5" style="font-family: 'Passions Conflict', cursive;">Akad Nikah</h2>
+                <hr class="border-[2px] border-slate-900 ml-[48%] w-[10%]">
+                <div class="schedule flex">
+                    <p class="bln text-slate-800 m-auto mt-8 text-center">Febuari<br>2025</p>
+                    <hr class="line1 mt-8 h-[50px] m-auto border-[1px] border-slate-800">
+                    <h4 class="tgl m-auto mt-4"><b class="m-auto flex justify-center text-[35px]">11</b><p class="text-slate-800 ">Selasa</p></h4>
+                    <hr class="line2 mt-8 h-[50px] m-auto border-[1px] border-slate-800">
+                    <p class="tmpt text-slate-800 m-auto mt-8 m-auto text-center">Rumah<br>Jatisawit</p>
+                </div>
+                <p class="text-slate-800 text-center italic mt-5">08:00 - Selesai <br>Dk. Krajan Jatisawit Rt.01/ Rw.02 Bumiayu</p>
+            </div>
+            <div class="card2 bg-red-50 h-[300px] rounded-lg shadow-lg">
+                <h2 class="text-[50px] text-center mt-5" style="font-family: 'Passions Conflict', cursive;">Resepsi</h2>
+                <hr class="border-[2px] border-slate-900 ml-[48%] w-[10%]">
+                <div class="schedule flex">
+                    <p class="bln text-slate-800 m-auto mt-8 text-center">Febuari<br>2025</p>
+                    <hr class="line1 mt-8 h-[50px] m-auto border-[1px] border-slate-800">
+                    <h4 class="tgl m-auto mt-4"><b class="m-auto flex justify-center text-[35px]">11</b><p class="text-slate-800 ">Selasa</p></h4>
+                    <hr class="line2 mt-8 h-[50px] m-auto border-[1px] border-slate-800">
+                    <p class="tmpt text-slate-800 m-auto mt-8 m-auto text-center">Rumah<br>Jatisawit</p>
+                </div>
+                <p class="text-slate-800 text-center italic mt-5">10.00 - Selesai <br>Dk. Krajan Jatisawit Rt.01/ Rw.02 Bumiayu</p>
+            </div>
+        </div>
+        
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+            <defs><path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" /></defs>
+            <g class="parallax">
+                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(254,242,242,0.7" />
+                <use xlink:href="#gentle-wave" x="48" y="3" class="fill-red-100 opacity-[90%]" />
+                <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(254,242,242,0.3)" />
+                <use xlink:href="#gentle-wave" x="48" y="7" fill="#fef2f2" />
+            </g>
+        </svg>
+    </section>
+
+    
+    <!-- GALLERY -->
+    <section id="gallery">
+        <div class="photo h-[100%]">
+            <img src="img/element/flower2.png" alt="" class="sm:w-[300px] w-[80%] pt-[50px] flower3 m-auto mb-[5px]">
+            <h1 class="title3 text-[50px] text-center mt-[0px]" style="font-family: 'Passions Conflict', cursive;">Our Gallery</h1>
+            
+            <div class="z-50 full-img w-[100%] h-[100vh] fixed top-0 left-0 items-center justify-center" style="background-color: rgba(255, 255, 255, 0.6); display: none;" id="fullImgBox">
+                <img src="img/gallery/img1.jpg" alt="" class="w-[90%] max-w-[500px]" id="fullImg">
+                <span class="absolute top-[25%] ml-[85%] text-[30px] cursor-pointer" onclick="closeFullImg()">X</span>
+            </div>
+        
+            <div class="gallery w-[80%] mt-[50px] m-auto mb-[50px] mt-5 grid md:grid-cols-2 lg:grid-cols-3 gap-[13px]">
+                <img src="img/gallery/img1.jpg" alt="" class="w-[100%] rounded-[5px] cursor-pointer h-[500px] block" onclick="openFullImg(this.src)" id="img1">
+                <img src="img/gallery/img2.jpg" alt="" class="w-[100%] rounded-[5px] cursor-pointer h-[500px] block" onclick="openFullImg(this.src)" id="img2">
+                <img src="img/gallery/img3.jpg" alt="" class="w-[100%] rounded-[5px] cursor-pointer h-[500px] block" onclick="openFullImg(this.src)" id="img3">
+                <img src="img/gallery/img44.jpg" alt="" class="w-[100%] rounded-[5px] cursor-pointer h-[500px] block" onclick="openFullImg(this.src)" id="img4">
+                <img src="img/gallery/img55.jpg" alt="" class="w-[100%] rounded-[5px] cursor-pointer h-[500px] block" onclick="openFullImg(this.src)" id="img5">
+                <img src="img/gallery/66.jpg" alt="" class="w-[100%] rounded-[5px] cursor-pointer h-[500px] block" onclick="openFullImg(this.src)" id="img6">
+            </div>
+        </div>
+
+        
+       <div class="h-[100%] pt-10" style="background-image: url(img/bg/wedding2.jpg); background-attachment: fixed; background-size: cover; background-repeat: no-repeat; background-position: center;">
+
+
+            <div class="kosong3"></div>
+
+            <div class="m-auto w-[95%] align-center bg-white/[.7] rounded-[5px] p-2 z-10">
+                <p class="text-center text-gray-900 text-[15px] p-6">"Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir."</p>
+                <h2 class="font-semibold text-center text-[24px] text-slate-900">QS. Ar-Rum : 21</h2>
+            </div>
+            
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs><path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" /></defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(254,242,242,0.7" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" class="fill-red-100 opacity-[90%]" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(254,242,242,0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fef2f2" />
+                </g>
+            </svg>
+        </div>
+        <div class="maps">
+            <img src="img/element/flower2.png" alt="" class="sm:w-[300px] w-[80%] pt-[50px] flower4 m-auto">
+            <h1 class="title4 text-[50px] text-center mt-[-5px]" style="font-family: 'Passions Conflict', cursive;">Location</h1>
+
+            <!-- <div class="map w-[100%]">
+                <div class="maps">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.5307305808176!2d108.98811201424803!3d-7.252394374485639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6fb7cd4e9993f5%3A0x8bf9adfa62b9455e!2sP2W3%2BF6X%2C%20Bumiayu%2C%20Kabupaten%20Brebes%2C%20Jawa%20Tengah!5e0!3m2!1sid!2sid!4v1698685474012!5m2!1sid!2sid" 
+                        width="600" 
+                        height="400" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade" 
+                        class="mt-[20px] h-[300px] w-[100%]">
+                    </iframe>
+                </div>
+                <div class="btn-map m-auto mt-8 text-center"> Mengurangi margin-top -->
+                    <!-- <a 
+                        href="https://www.google.com/maps/place/P2W3%2BF6X+Bumiayu,+Kabupaten+Brebes,+Jawa+Tengah/@-7.2523944,108.988112,17z/data=!3m1!4b1!4m6!3m5!1s0x2e6fb7cd4e9993f5:0x8bf9adfa62b9455e!8m2!3d-7.2523944!4d108.9903007!16s%2Fg%2F11gft5_fwr" 
+                        target="_blank"
+                        class="text-white py-2 px-4 rounded-lg bg-pink-400 hover:bg-pink-300"
+                    >
+                        Open Google Maps
+                    </a>
+                </div>
+            </div> -->
+
+            <div class="map w-[100%]">
+                <div class="maps">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.5307305808176!2d108.98811201424803!3d-7.252394374485639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwMTUnMDkuNiJTIDEwOMKwNTknMTcuNiJF!5e0!3m2!1sid!2sid!4v1698685474012!5m2!1sid!2sid" 
+                        width="600" 
+                        height="400" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade" 
+                        class="mt-[20px] h-[300px] w-[100%]">
+                    </iframe>
+                </div>
+                <div class="btn-map m-auto mt-8 text-center">
+                    <a 
+                        href="https://maps.app.goo.gl/tKnQYVGBVosPzeNJ8" 
+                        target="_blank"
+                        class="text-white py-2 px-4 rounded-lg bg-pink-400 hover:bg-pink-300"
+                    >
+                        Open Google Maps
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="wedding-gift text-center py-10">
+        <img src="img/element/flower2.png" alt="Decoration" class="sm:w-[300px] w-[80%] pt-[50px] flower5 m-auto">
+        <h1 class="title5 text-[50px] text-center mt-[-5px]" style="font-family: 'Passions Conflict', cursive;">Gift</h1>
+    
+        <!-- Menambahkan animasi pada paragraf -->
+        <p class="text-gray-600 mt-6 px-4 sm:px-0 text-animate">
+            Doa & restu Anda di acara pernikahan kami sudah cukup sebagai hadiah, namun apabila Anda ingin memberikan lebih, <br>
+            maka kami akan menerima dengan senang hati dan tentunya hal ini akan melengkapi kebahagiaan kami.
+        </p>
+        <p class="text-gray-600 italic mt-4 text-animate">Klik tombol di bawah untuk melihat rincian</p>
+    
+        <div class="buttons mt-6 flex justify-center space-x-4 ">
+            <button 
+                onclick="showDetails('rekening')">
+                No Rekening <i class="fas fa-credit-card"></i>
+            </button>
+            <button 
+                onclick="showDetails('kado')">
+                Kirim Kado <i class="fas fa-gift"></i>
+            </button>
+        </div>
+    
+        <!-- Rincian No Rekening -->
+        <div id="rekening-details" class="details hidden mt-8 p-6 bg-gray-100 shadow-lg rounded-lg w-[90%] sm:w-[50%] m-auto shadow-md">
+            <h3 class="text-lg font-bold text-animate">No Rekening</h3>
+            <p class="text-sm text-gray-600 mt-2 text-animate">BRI: 136101003540503 (a.n. Maria Nur Alfatihah)<br></p>
+            <button onclick="copyToClipboard('136101003540503 (a.n. Maria Nur Alfatihah)')">
+                Salin 
+            </button>
+        </div>
+    
+        <!-- Rincian Alamat -->
+        <div id="kado-details" class="details hidden mt-8 p-6 bg-gray-100 shadow-lg rounded-lg w-[90%] sm:w-[50%] m-auto shadow-md">
+            <h3 class="text-lg font-bold text-animate">Alamat</h3>
+            <p class="text-sm text-gray-600 mt-2 leading-relaxed text-animate">
+                Dk. Krajan Jatisawit Rt.01/ Rw.02 Bumiayu<br>
+                (Sebrang Pasar Jatisawit Belakang Obormas)
+            </p>
+            <button onclick="copyToClipboard('Dk. Krajan Jatisawit Rt.01/ Rw.02 Bumiayu'<br>'(Sebrang Pasar Jatisawit Belakang Obormas)')" >
+            Salin
+            </button>
+        </div>
+    </section>
+    
+    
+    
+
+    <!-- GUESTBOOK -->
+    <section id="guestbook" class="m-auto h-[750px] pt-[30px]">
+        <img src="img/element/flower2.png" alt="" class="sm:w-[300px] w-[80%] pt-[50px] flower6 m-auto">
+        <h1 class="title6 text-[50px] text-center mt-[-5px]" style="font-family: 'Passions Conflict', cursive;">GuestBooks</h1>
+    
+        <div class="form-container mt-[20px]">
+            <div class="form rounded-2xl border-[1.5px] border-red-400 overflow-auto">
+                <div class="attendance-summary">
+                    <div class="attendance-box" id="count-hadir">0<br><span>Hadir</span></div>
+                    <div class="attendance-box" id="count-tidak-hadir">0<br><span>Tidak Hadir</span></div>
+                    <div class="attendance-box" id="count-ragu">0<br><span>Masih Ragu</span></div>
+                </div>
+                <form id="attendance-form" class="attendance-form">
+                    <input type="text" id="nama" placeholder="Nama" class="input-field" required>
+                    <textarea id="ucapan" placeholder="Ucapan" class="input-field" rows="3" required></textarea>
+                    <select id="kehadiran" class="input-field" required>
+                        <option value="" disabled selected>Konfirmasi Kehadiran</option>
+                        <option value="Hadir">Hadir</option>
+                        <option value="Tidak Hadir">Tidak Hadir</option>
+                        <option value="Masih Ragu">Masih Ragu</option>
+                    </select>
+                    <button type="submit" class="submit-button">Kirim</button>
+                </form>
+                <div id="comments-section" class="comments-section">
+                    <strong>Comments</strong>
+                </div>
+            </div>
+        </div>
+        <div class="ig pt-[50px]">
+            <div class="flex justify-center">
+                <a href="https://www.instagram.com/mranralfth_?igsh=MWNhc3hhNTVlMmV1bA==" class="flex justify-center mr-[20px]" target="_blank">
+                    <ion-icon name="logo-instagram" class="rounded-full w-[20px] h-[20px]"></ion-icon>
+                    <p class="ml-2 font-semibold text-[15px] text-gray-900">mranralfth_</p>
+                </a>
+                <a href="https://www.instagram.com/frsalfrdzi?igsh=MWgzNnR6OTQzaTRtaQ==" class="flex justify-center" target="_blank">
+                    <ion-icon name="logo-instagram" class="rounded-full w-[20px] h-[20px]"></ion-icon>
+                    <p class="ml-2 font-semibold text-[15px] text-gray-900">frsalfrdzi</p>
+                </a>
+            </div> 
+        </div>
+        
+    </section>
+
+    <footer class="bg-[#faebd7] w-full h-[200px] relative bottom-0">
+        <div class="footer pt-[50px]">
+            <a href="https://www.instagram.com/nsaizza29/profilecard/?igsh=MTFxNGFleW1qaWR3bA==" class="flex justify-center" target="_blank">
+                <p class="ml-1 font-semibold text-[12px] text-gray-900">Design by nsaizza</p>
+            </a>            
+            <p class="m-auto text-center mt-2 text-xs text-gray-700">Ⓒ Undangan Pernikahan Online</p>
+        </div>
+    </footer>
+
+   <!-- <div class="audio-player fixed bottom-[70px] sm:bottom-[90px] right-[-160px] sm:right-[-150px] z-20">
+    <audio id="audio" autoplay loop src="mp3/Ed-Sheeran-Perfect.mp3"></audio>
+        <div class="controls m-auto">
+            <button id="playerButton" class="player-button">
+                <svg id="playIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#3D3132">
+                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM7 8a1 1 0 012 0v4a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v4a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />
+                </svg>
+                <svg id="pauseIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#3D3132" style="display:none;">
+                    <path fill-rule="evenodd" d="M4 4a1 1 0 011 1v10a1 1 0 11-2 0V5a1 1 0 011-1zm12 0a1 1 0 011 1v10a1 1 0 11-2 0V5a1 1 0 011-1z" clip-rule="evenodd" />
+                </svg>
+            </button>
+        </div>
+    </div> -->
+    <audio id="song">
+        <source src="mp3/Nyoman Paul Andi Rianto – The Way You Look At Me (Official Lyric Video).mp3">
+    </audio>
+
+    
+    <script>
+
+        window.addEventListener('click',() => {
+            document.getElementById("song").play();
+        })
+
+//         function loadGuestbook() {
+//     fetch("load_guestbook.php")
+//         .then(response => response.json())
+//         .then(data => {
+//             document.getElementById("comments-section").innerHTML = "<strong>Comments</strong>" + data.comments;
+//             document.getElementById("count-hadir").innerHTML = data.hadir + "<br><span>Hadir</span>";
+//             document.getElementById("count-tidak-hadir").innerHTML = data.tidak_hadir + "<br><span>Tidak Hadir</span>";
+//             document.getElementById("count-ragu").innerHTML = data.ragu + "<br><span>Masih Ragu</span>";
+//         });
+// }
+
+// // Load data saat halaman dimuat
+// document.addEventListener("DOMContentLoaded", loadGuestbook);
+
+// document.getElementById("attendance-form").addEventListener("submit", function (e) {
+//     e.preventDefault(); 
+
+//     const nama = document.getElementById("nama").value.trim();
+//     const ucapan = document.getElementById("ucapan").value.trim();
+//     const kehadiran = document.getElementById("kehadiran").value;
+
+//     if (nama === "" || ucapan === "" || kehadiran === "") {
+//         alert("Harap isi semua kolom!");
+//         return;
+//     }
+
+//     const formData = new FormData();
+//     formData.append("nama", nama);
+//     formData.append("ucapan", ucapan);
+//     formData.append("kehadiran", kehadiran);
+
+//     fetch("submit.php", {
+//         method: "POST",
+//         body: formData,
+//     })
+//     .then(response => response.text())
+//     .then(data => {
+//         if (data === "success") {
+//             alert("Ucapan berhasil dikirim!");
+//             loadGuestbook(); // Update tampilan
+//             document.getElementById("attendance-form").reset();
+//         } else {
+//             alert("Terjadi kesalahan. Coba lagi nanti.");
+//         }
+//     })
+//     .catch(error => console.error("Error:", error));
+// });
+       
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('attendance-form');
+    const commentsSection = document.getElementById('comments-section');
+
+    // Fungsi untuk memuat data dari localStorage
+    function loadData() {
+        const data = JSON.parse(localStorage.getItem('attendanceData')) || [];
+        updateSummary(data);
+        displayComments(data);
+    }
+
+    // Fungsi untuk memperbarui ringkasan kehadiran
+    function updateSummary(data) {
+        const countHadir = data.filter(d => d.kehadiran === 'Hadir').length;
+        const countTidakHadir = data.filter(d => d.kehadiran === 'Tidak Hadir').length;
+        const countRagu = data.filter(d => d.kehadiran === 'Masih Ragu').length;
+
+        document.getElementById('count-hadir').innerHTML = `${countHadir}<br><span>Hadir</span>`;
+        document.getElementById('count-tidak-hadir').innerHTML = `${countTidakHadir}<br><span>Tidak Hadir</span>`;
+        document.getElementById('count-ragu').innerHTML = `${countRagu}<br><span>Masih Ragu</span>`;
+    }
+
+    // Fungsi untuk menampilkan komentar beserta waktu
+    function displayComments(data) {
+        commentsSection.innerHTML = '<strong>Comments</strong>';
+        data.forEach(item => {
+            const comment = document.createElement('div');
+            comment.classList.add('comment'); // Menambahkan kelas 'comment'
+            comment.innerHTML = `
+                <strong>${item.nama}</strong> ${item.ucapan} <br>
+                <small>${item.waktu}</small>
+            `;
+            commentsSection.appendChild(comment);
+        });
+    }
+
+    // Menangani pengiriman form
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const nama = document.getElementById('nama').value;
+        const ucapan = document.getElementById('ucapan').value;
+        const kehadiran = document.getElementById('kehadiran').value;
+
+        // Mendapatkan waktu saat ucapan dikirim
+        const waktu = new Date().toLocaleString();  // Menyimpan waktu dalam format lokal
+
+        // Membuat entry baru dengan waktu
+        const newEntry = { nama, ucapan, kehadiran, waktu };
+        const existingData = JSON.parse(localStorage.getItem('attendanceData')) || [];
+        existingData.push(newEntry);
+        localStorage.setItem('attendanceData', JSON.stringify(existingData));
+
+        form.reset();
+        loadData();  // Memuat ulang data setelah menambahkan ucapan baru
+    });
+
+    loadData();  // Memuat data saat halaman pertama kali dimuat
+});
+
+       
+       function countdown() {
+        // Set target date
+        const targetDate = new Date("February 11, 2025 00:00:00").getTime();
+
+        // Update every second
+        const timer = setInterval(() => {
+            const now = new Date().getTime();
+            const timeLeft = targetDate - now;
+
+            // Calculate days, hours, minutes, seconds
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            // Update HTML elements
+            document.getElementById("days").textContent = days;
+            document.getElementById("hours").textContent = hours;
+            document.getElementById("minutes").textContent = minutes;
+            document.getElementById("seconds").textContent = seconds;
+
+            // Stop timer when the date is reached
+            if (timeLeft < 0) {
+                clearInterval(timer);
+                document.getElementById("days").textContent = "0";
+                document.getElementById("hours").textContent = "0";
+                document.getElementById("minutes").textContent = "0";
+                document.getElementById("seconds").textContent = "0";
+            }
+        }, 1000);
+    }
+
+    // Start the countdown
+    countdown();
+
+   
+
+    function copyToClipboard(text) {
+        navigator.clipboard.writeText(text).then(() => {
+            alert("Teks berhasil disalin: " + text);
+        }).catch(err => {
+            console.error("Gagal menyalin teks:", err);
+        });
+    }
+
+
+    function showDetails(type) {
+    // Sembunyikan semua rincian terlebih dahulu
+    document.querySelectorAll('.details').forEach(function(detail) {
+        detail.classList.remove('show');
+    });
+
+    // Menampilkan rincian sesuai dengan pilihan
+    const detailElement = document.getElementById(type + '-details');
+    detailElement.classList.add('show');
+}
+
+     </script>
+   
+   <script src="query-3.6.1.min.js"></script>
+   <script src="script.js"></script>
+   <script src="simplyCountdown.js"></script>
+   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

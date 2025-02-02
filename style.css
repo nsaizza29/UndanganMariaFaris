@@ -1,0 +1,910 @@
+/* CSS */
+
+/* animation css */
+
+* {
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+.hero {
+    animation : landing 1.5s forwards;
+}
+
+@keyframes landing {
+    0% {
+        opacity: 0;
+        transform: translateY(0px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(10px);
+    }
+}
+
+div.kosong2 {
+    position: absolute;
+    height: 500px;
+    width: 100%;
+    background: linear-gradient(0deg , rgba(254,242,242,0), rgba(254,242,242,1)); 
+}
+
+div.kosong3 {
+    position: absolute;
+    left: 0;
+    margin-top: -40px;
+    height:  200px;
+    width: 100%;
+    background: linear-gradient(0deg , rgba(254,242,242,0), rgba(254,242,242,1)); 
+}
+
+img.wedding {
+    filter: contrast(80%);
+    filter: brightness(80%);
+  }
+
+/* .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr,));
+    grid-gap: 15px;
+} */
+
+.bi {
+    fill: #475569;
+}
+.bi.putih {
+    fill: #F87171;
+}
+
+.nav {
+    box-shadow: 1px -2px 27px -11px rgba(0,0,0,0.30);
+    -webkit-box-shadow: 1px -2px 27px -11px rgba(0,0,0,0.30);
+    -moz-box-shadow: 1px -2px 27px -11px rgba(0,0,0,0.30);
+}
+
+.nav-title {
+    fill: #475569;
+}
+.nav-title.putih {
+    fill: #F87171;
+}
+
+.flower {
+    transform: scale(0);
+    transition: .5s;
+    opacity: 0;
+}
+.flower.muncul {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.flower2 {
+    transform: scale(0);
+    transition: .5s;
+    opacity: 0;
+}
+.flower2.muncul {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.flower3 {
+    transform: scale(0);
+    transition: .5s;
+    opacity: 0;
+}
+.flower3.muncul {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.flower4 {
+    transform: scale(0);
+    transition: .5s;
+    opacity: 0;
+}
+.flower4.muncul {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.flower5 {
+    transform: scale(0);
+    transition: .5s;
+    opacity: 0;
+}
+.flower5.muncul {
+    transform: scale(1);
+    opacity: 1;
+}
+.flower6 {
+    transform: scale(0);
+    transition: .5s;
+    opacity: 0;
+}
+.flower6.muncul {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.title {
+    transform: scale(1,0);
+    transition: .5s;
+}
+.title.muncul {
+    transform: scale(1);
+}
+
+.title2 {
+    transform: scale(1,0);
+    transition: .5s;
+}
+.title2.muncul {
+    transform: scale(1);
+}
+
+.title3 {
+    transform: scale(1,0);
+    transition: .5s;
+}
+.title3.muncul {
+    transform: scale(1);
+}
+
+.title4 {
+    transform: scale(1,0);
+    transition: .5s;
+}
+.title4.muncul {
+    transform: scale(1);
+}
+
+.title5 {
+    transform: scale(1,0);
+    transition: .5s;
+}
+.title5.muncul {
+    transform: scale(1);
+}
+.title6 {
+    transform: scale(1,0);
+    transition: .5s;
+}
+.title6.muncul {
+    transform: scale(1);
+}
+.opening {
+    transform: translateY(100px);
+    opacity: 0;
+    transition: .5s;
+}
+.opening.muncul {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.profiles {
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 1s;
+}
+.profiles.muncul {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.profile-1 {
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 1s;
+}
+.profile-1.muncul {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.profile-2 {
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 1s;
+}
+.profile-2.muncul {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dan {
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 2s;
+}
+.dan.muncul {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dan2 {
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 2s;
+}
+.dan2.muncul {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card1 {
+    /* box-shadow: 0px 0px 9px 2px rgba(0,0,0,0.46);
+    -webkit-box-shadow: 0px 0px 9px 2px rgba(0,0,0,0.46);
+    -moz-box-shadow: 0px 0px 9px 2px rgba(0,0,0,0.46); */
+    transform: translateY(100px);
+    opacity: 0;
+    transition: .5s;
+}
+.card1.muncul {
+    opacity: 85%;
+    transform: translateY(0);
+}
+
+.card2 {
+    /* box-shadow: 0px 0px 9px 2px rgba(0,0,0,0.46);
+    -webkit-box-shadow: 0px 0px 9px 2px rgba(0,0,0,0.46);
+    -moz-box-shadow: 0px 0px 9px 2px rgba(0,0,0,0.46); */
+    transform: translateY(100px);
+    opacity: 0;
+    transition: .9s;
+}
+.card2.muncul {
+    opacity: 85%;
+    transform: translateY(0);
+}
+
+.gallery img {
+    transition: 0.3s ease-in-out;
+}
+
+.gallery img:hover {
+    filter: brightness(130%);
+}
+
+#img1 {
+    transform: scale(0);
+    transition: .7s;
+    opacity: 0;
+}
+#img1.muncul {
+    transform: scale(1);
+    opacity: 3;
+}
+
+#img2 {
+    transform: scale(0);
+    transition: 1s;
+    opacity: 0;
+}
+#img2.muncul {
+    transform: scale(1);
+    opacity: 1;
+}
+
+#img3 {
+    transform: scale(0);
+    transition: 1.3s;
+    opacity: 0;
+}
+#img3.muncul {
+    transform: scale(1);
+    opacity: 1;
+}
+
+#img4 {
+    transform: scale(0);
+    transition: .7s;
+    opacity: 0;
+}
+#img4.muncul {
+    transform: scale(1);
+    opacity: 3;
+}
+
+#img5 {
+    transform: scale(0);
+    transition: 1s;
+    opacity: 0;
+}
+#img5.muncul {
+    transform: scale(1);
+    opacity: 1;
+}
+
+#img6 {
+    transform: scale(0);
+    transition: 1.3s;
+    opacity: 0;
+}
+#img6.muncul {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.circle1 {
+    transform: translateX(-100px);
+    opacity: 0;
+    transition: .5s;
+}
+.circle1.muncul {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.circle2 {
+    transform: translateX(-100px);
+    opacity: 0;
+    transition: 1s;
+}
+.circle2.muncul {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.circle3 {
+    transform: translateX(-100px);
+    opacity: 0;
+    transition: 2s;
+}
+.circle3.muncul {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.circle4 {
+    transform: translateX(-190px);
+    opacity: 0;
+    transition: 2.4s;
+}
+.circle4.muncul {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.btn-map {
+    transform: translateY(100px);
+    opacity: 0;
+    transition: .5s;
+}
+.btn-map.muncul {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+ul li a {
+    width: 120px;
+    height: 70px;
+    padding: 10px;
+    transition: .5s;
+}
+
+ul li a.active{
+    background-color: salmon;
+}
+
+@media screen and (max-width: 639px) {
+    ul li a.active{
+        background-color: salmon;
+    }
+    ul li a {
+        width: 55px;
+        height: 70px;
+    }
+    ul li a svg{
+    }
+}
+
+ul li a.active span {
+    color: #fff;
+}
+ul li a.active svg {
+    fill: #fff;
+}
+
+
+/* End Animation CSS */
+
+/* AUDIO */
+.audio-player {
+    --player-button-width: 3em;
+    --sound-button-width: 2em;
+    --space: .5em;
+    width: 15rem;
+    height: 3rem;
+  }
+  
+  .controls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 70%;
+    margin-top: 10px;
+  }
+  
+  .player-button {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    padding: 0;
+    width: 40px;
+    margin-right: 5px;
+  }
+
+  /* AUDIO END */
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 340px) {
+
+    li a svg {
+        width: 17px;
+        height: 17px;
+    }
+    .bi-house-heart-fill {
+        width: 20px;
+        height: 20px;
+    }
+
+    li a span {
+        margin-left: -1005px;
+        visibility: hidden;
+        position:absolute;
+    }
+  }
+
+@media screen and (max-width: 639px) {
+
+    /* h2.title-hero {
+        margin-top: -150px;
+    } */
+
+    li {
+        margin-left: 25px;
+    }
+
+    li a span {
+        margin-left: -1005px;
+        visibility: hidden;
+        position:absolute;
+    }
+  }
+
+.acara {
+    display: flex;
+}
+
+@media screen and (max-width: 855px) {
+    .acara {
+        display: grid;
+    }
+    .card2 {
+        margin-top: 20px;
+    }
+}
+
+.card1 {
+    width: 400px;
+}
+.card2 {
+    width: 400px;
+}
+
+@media screen and (max-width: 418px) {
+    .card1 {
+        width: 300px;
+        height: 230px;
+    }
+    .card2 {
+        width: 300px;
+        height: 230px;
+    }
+}
+
+@media screen and (max-width: 315px) {
+    .card1 {
+        width: 245px;
+        height: 230px;
+    }
+    .card2 {
+        width: 245px;
+        height: 230px;
+    }
+}
+
+@media screen and (max-width: 250px) {
+    .card1 {
+        width: 230px;
+        height: 230px;
+    }
+    .card2 {
+        width: 230px;
+        height: 230px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-gap: 15px;
+    }
+}
+
+@media screen and (max-height: 850px) {
+    section#event {
+        height: 100%;
+    }
+}
+
+@media screen and (max-height: 815px) {
+    section#event {
+        height: 100%;
+    }
+}
+
+@media screen and (max-height: 815px) {
+    section#event {
+        height: 100%;
+    }
+}
+
+@media screen and (max-height: 670px) {
+    section#event {
+        height: 100%;
+    }
+    #letter {
+        padding-bottom: 30%;
+    }
+}
+
+@media screen and (max-height: 670px) {
+    section#event {
+        height: 100%;
+    }
+}
+
+@media screen and (max-height: 555px) {
+    section#event {
+        height: 100%;
+    }
+}
+
+@media screen and (max-height: 445px) {
+    .surah {
+        height: 100%;
+    }
+}
+
+/* wave animate */
+
+.waves1 {
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    bottom: 0;
+    min-height: 100px;
+    max-height: 100px;
+}
+
+.waves {
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    margin-bottom: -50px;
+    min-height: 100px;
+    max-height: 100px;
+}
+
+.parallax > use {
+    -webkit-animation: moveForever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+            animation: moveForever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+.parallax > use:nth-child(1) {
+    -webkit-animation-delay: -2s;
+            animation-delay: -2s;
+    -webkit-animation-duration: 7s;
+            animation-duration: 7s;
+}
+
+.parallax > use:nth-child(2) {
+    -webkit-animation-delay: -3s;
+            animation-delay: -3s;
+    -webkit-animation-duration: 10s;
+            animation-duration: 10s;
+}
+
+.parallax > use:nth-child(3) {
+    -webkit-animation-delay: -4s;
+            animation-delay: -4s;
+    -webkit-animation-duration: 13s;
+            animation-duration: 13s;
+}
+
+.parallax > use:nth-child(4) {
+    -webkit-animation-delay: -5s;
+            animation-delay: -5s;
+    -webkit-animation-duration: 20s;
+            animation-duration: 20s;
+}
+
+@-webkit-keyframes moveForever {
+    0% {
+        -webkit-transform: translate3d(-90px, 0, 0);
+                transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+        -webkit-transform: translate3d(85px, 0, 0);
+                transform: translate3d(85px, 0, 0);
+    }
+}
+
+@keyframes moveForever {
+    0% {
+        -webkit-transform: translate3d(-90px, 0, 0);
+                transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+        -webkit-transform: translate3d(85px, 0, 0);
+                transform: translate3d(85px, 0, 0);
+    }
+}
+
+@media (max-width : 768px) {
+    h1 {
+        font-size: 24px;
+    }
+    .content {
+        height: 30vh;
+    }
+    .waves {
+        height: 40px;
+        min-height: 40px;
+    }
+}
+
+
+.form-container {
+    width: 100%;
+    height: 400x;
+    border-radius: 15px;
+    padding: 20px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    overflow: hidden; /* Agar konten tidak melampaui batas */
+}
+.form {
+    width: 100%;
+    max-width: 600px;
+    background: rgb(250, 229, 232);
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.attendance-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.attendance-box {
+    flex: 1;
+    min-width: 100px; /* Agar tetap sejajar di layar kecil */
+    text-align: center;
+}
+
+.attendance-box span {
+    display: block;
+    font-size: 12px;
+    font-weight: normal;
+    color: #777;
+}
+@media (max-width: 480px) {
+    .attendance-summary {
+        flex-wrap: nowrap;
+    }
+    .attendance-box {
+        flex-basis: 33.33%;
+    }
+}
+
+
+.attendance-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.submit-button {
+    padding: 10px;
+    background: palevioletred;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.submit-button:hover {
+    background: pink;
+}
+
+.comments-section {
+    background: #f9f9f9;
+    border-radius: 10px;
+    max-height: 150px;
+    overflow-y: auto;
+    margin-top: 15px;
+    padding: 12px;
+}
+
+.comments-section strong {
+    display: block;
+    margin-bottom: 5px; /* Mengurangi jarak antara strong dan komentar */
+}
+
+.comment {
+    margin-bottom: 10px; /* Mengurangi jarak antar komentar */
+    padding: 5px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.comment strong {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 2px; /* Mengurangi jarak antara nama dan isi komentar */
+}
+
+.comment p {
+    margin: 0; /* Menghilangkan margin di sekitar isi komentar */
+    font-size: 12px;
+    color: #555;
+}
+
+.comment .comment-date {
+    font-size: 10px;
+    color: #888;
+}
+
+/* Media Queries untuk Responsif */
+@media (max-width: 768px) {
+    .form-container {
+        height: auto;
+        padding: 10px;
+    }
+
+    .form {
+        padding: 10px;
+    }
+
+    
+    .input-field {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .submit-button {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .comments-section {
+        max-height: 120px;
+    }
+
+    .comment {
+        padding: 6px;
+    }
+}
+
+/* Animasi untuk teks yang muncul dari bawah ke atas */
+@keyframes slideUpText {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Mengatur posisi awal di bawah */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Posisi normal di atas */
+    }
+}
+
+/* Class untuk animasi teks */
+.text-animate {
+    animation: slideUpText 0.8s ease-out forwards;
+}
+
+/* Animasi untuk elemen yang muncul */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.details {
+    display: none; /* Sembunyikan elemen secara default */
+    opacity: 0; /* Menyembunyikan dengan animasi fade */
+}
+
+.details.show {
+    display: block;
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+/* Gaya untuk tombol */
+.buttons button {
+    font-size: 1rem;
+    padding: 5px 24px; /* Menambah ukuran tombol */
+    background-color: palevioletred; /* Warna coklat */
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Memberikan bayangan */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover efek */
+.buttons button:hover {
+    background-color: pink; /* Coklat lebih gelap */
+    transform: scale(1.05); /* Sedikit membesar */
+}
+
+/* Fokus efek */
+.buttons button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px pink; /* Efek fokus */
+}
+
+/* Tombol Salin */
+button[onclick^="copyToClipboard"] {
+    font-size: 1rem;
+    padding: 5px 24px; /* Ukuran tombol */
+    background-color: palevioletred; /* Warna latar belakang */
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Bayangan tombol */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: block; /* Membuat tombol menjadi elemen block */
+    margin-top: 20px; /* Menambahkan jarak dari elemen atas */
+    margin-left: auto; /* Menjaga tombol di tengah horizontal */
+    margin-right: auto; /* Menjaga tombol di tengah horizontal */
+}
+
+/* Tombol Salin hover efek */
+button[onclick^="copyToClipboard"]:hover {
+    background-color: pink; /* Warna tombol saat hover */
+    transform: scale(1.05); /* Membuat tombol sedikit membesar */
+}
