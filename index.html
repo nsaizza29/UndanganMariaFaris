@@ -472,112 +472,52 @@
             document.getElementById("song").play();
         })
 
-//         function loadGuestbook() {
-//     fetch("load_guestbook.php")
-//         .then(response => response.json())
-//         .then(data => {
-//             document.getElementById("comments-section").innerHTML = "<strong>Comments</strong>" + data.comments;
-//             document.getElementById("count-hadir").innerHTML = data.hadir + "<br><span>Hadir</span>";
-//             document.getElementById("count-tidak-hadir").innerHTML = data.tidak_hadir + "<br><span>Tidak Hadir</span>";
-//             document.getElementById("count-ragu").innerHTML = data.ragu + "<br><span>Masih Ragu</span>";
-//         });
-// }
-
-// // Load data saat halaman dimuat
-// document.addEventListener("DOMContentLoaded", loadGuestbook);
-
-// document.getElementById("attendance-form").addEventListener("submit", function (e) {
-//     e.preventDefault(); 
-
-//     const nama = document.getElementById("nama").value.trim();
-//     const ucapan = document.getElementById("ucapan").value.trim();
-//     const kehadiran = document.getElementById("kehadiran").value;
-
-//     if (nama === "" || ucapan === "" || kehadiran === "") {
-//         alert("Harap isi semua kolom!");
-//         return;
-//     }
-
-//     const formData = new FormData();
-//     formData.append("nama", nama);
-//     formData.append("ucapan", ucapan);
-//     formData.append("kehadiran", kehadiran);
-
-//     fetch("submit.php", {
-//         method: "POST",
-//         body: formData,
-//     })
-//     .then(response => response.text())
-//     .then(data => {
-//         if (data === "success") {
-//             alert("Ucapan berhasil dikirim!");
-//             loadGuestbook(); // Update tampilan
-//             document.getElementById("attendance-form").reset();
-//         } else {
-//             alert("Terjadi kesalahan. Coba lagi nanti.");
-//         }
-//     })
-//     .catch(error => console.error("Error:", error));
-// });
-       
-document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('attendance-form');
-    const commentsSection = document.getElementById('comments-section');
-
-    // Fungsi untuk memuat data dari localStorage
-    function loadData() {
-        const data = JSON.parse(localStorage.getItem('attendanceData')) || [];
-        updateSummary(data);
-        displayComments(data);
-    }
-
-    // Fungsi untuk memperbarui ringkasan kehadiran
-    function updateSummary(data) {
-        const countHadir = data.filter(d => d.kehadiran === 'Hadir').length;
-        const countTidakHadir = data.filter(d => d.kehadiran === 'Tidak Hadir').length;
-        const countRagu = data.filter(d => d.kehadiran === 'Masih Ragu').length;
-
-        document.getElementById('count-hadir').innerHTML = `${countHadir}<br><span>Hadir</span>`;
-        document.getElementById('count-tidak-hadir').innerHTML = `${countTidakHadir}<br><span>Tidak Hadir</span>`;
-        document.getElementById('count-ragu').innerHTML = `${countRagu}<br><span>Masih Ragu</span>`;
-    }
-
-    // Fungsi untuk menampilkan komentar beserta waktu
-    function displayComments(data) {
-        commentsSection.innerHTML = '<strong>Comments</strong>';
-        data.forEach(item => {
-            const comment = document.createElement('div');
-            comment.classList.add('comment'); // Menambahkan kelas 'comment'
-            comment.innerHTML = `
-                <strong>${item.nama}</strong> ${item.ucapan} <br>
-                <small>${item.waktu}</small>
-            `;
-            commentsSection.appendChild(comment);
+        function loadGuestbook() {
+    fetch("load_guestbook.php")
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("comments-section").innerHTML = "<strong>Comments</strong>" + data.comments;
+            document.getElementById("count-hadir").innerHTML = data.hadir + "<br><span>Hadir</span>";
+            document.getElementById("count-tidak-hadir").innerHTML = data.tidak_hadir + "<br><span>Tidak Hadir</span>";
+            document.getElementById("count-ragu").innerHTML = data.ragu + "<br><span>Masih Ragu</span>";
         });
+}
+
+// Load data saat halaman dimuat
+document.addEventListener("DOMContentLoaded", loadGuestbook);
+
+document.getElementById("attendance-form").addEventListener("submit", function (e) {
+    e.preventDefault(); 
+
+    const nama = document.getElementById("nama").value.trim();
+    const ucapan = document.getElementById("ucapan").value.trim();
+    const kehadiran = document.getElementById("kehadiran").value;
+
+    if (nama === "" || ucapan === "" || kehadiran === "") {
+        alert("Harap isi semua kolom!");
+        return;
     }
 
-    // Menangani pengiriman form
-    form.addEventListener('submit', function (e) {
-        e.preventDefault();
+    const formData = new FormData();
+    formData.append("nama", nama);
+    formData.append("ucapan", ucapan);
+    formData.append("kehadiran", kehadiran);
 
-        const nama = document.getElementById('nama').value;
-        const ucapan = document.getElementById('ucapan').value;
-        const kehadiran = document.getElementById('kehadiran').value;
-
-        // Mendapatkan waktu saat ucapan dikirim
-        const waktu = new Date().toLocaleString();  // Menyimpan waktu dalam format lokal
-
-        // Membuat entry baru dengan waktu
-        const newEntry = { nama, ucapan, kehadiran, waktu };
-        const existingData = JSON.parse(localStorage.getItem('attendanceData')) || [];
-        existingData.push(newEntry);
-        localStorage.setItem('attendanceData', JSON.stringify(existingData));
-
-        form.reset();
-        loadData();  // Memuat ulang data setelah menambahkan ucapan baru
-    });
-
-    loadData();  // Memuat data saat halaman pertama kali dimuat
+    fetch("submit.php", {
+        method: "POST",
+        body: formData,
+    })
+    .then(response => response.text())
+    .then(data => {
+        if (data === "success") {
+            alert("Ucapan berhasil dikirim!");
+            loadGuestbook(); // Update tampilan
+            document.getElementById("attendance-form").reset();
+        } else {
+            alert("Terjadi kesalahan. Coba lagi nanti.");
+        }
+    })
+    .catch(error => console.error("Error:", error));
 });
 
        
